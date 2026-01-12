@@ -66,6 +66,7 @@ class Controller:
     """Generic controller for operating any device"""
 
     def operate_device(self, device: Device):
+        #check if device object exists
         if not isinstance(device,Device):
             raise TypeError("Controller can operate only with Device objects")
         device.start()
